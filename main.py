@@ -10,7 +10,11 @@ class Movie():
 
     @property
     def play(self):
-        self.views += 1
+        if movie:
+            self.views += 1
+        if series:
+            self.views += 1
+            self.episode_num += 1
 
 
 class Series(Movie):
@@ -19,5 +23,3 @@ class Series(Movie):
         super().__init__(title, release_date, genre, views)
         self.season_num = season_num
         self.episode_num = episode_num
-
-
