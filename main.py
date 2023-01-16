@@ -73,7 +73,7 @@ def search(lib, title):
     result = []
     for vid in lib:
         if vid.title == title:
-            result.append(item)
+            result.append(vid)
     if result:
         return result
     else:
@@ -98,11 +98,11 @@ def generate_10(lib):
 
 #jak zmodyfikować tę, albo poprzednią funkcję żeby pętla nie miała wpływu na wyświetlenia
 
-generate_10(Movie.list)
+#generate_10(Movie.list)
 
 #part_11
 
 def top_titles(lib):
     return sorted(lib, key=lambda vid: vid.views, reverse=True)[:3]
 
-print(top_titles(Movie.list))
+#print(top_titles(Movie.list))
